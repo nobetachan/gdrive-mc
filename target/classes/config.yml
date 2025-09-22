@@ -1,0 +1,14 @@
+google:
+  credentials-file: plugins/Gdrive-MC/credentials.json
+  folder-id: "YOUR_GOOGLE_DRIVE_FOLDER_ID"
+backup:
+  auto: true # true = auto backup, false = manual
+  interval-hours: 24 # minimal 1 jam (24 jam = 1 hari)
+  backup-folder: plugins/Gdrive-MC/backups
+discord:
+  webhook-url: "YOUR_DISCORD_WEBHOOK_URL"
+  embed:
+    title: "Backup Minecraft Selesai"
+    description: "Backup berhasil diupload ke Google Drive."
+    color: 3066993
+    footer: "Gdrive-MC Plugin"

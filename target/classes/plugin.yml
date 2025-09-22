@@ -1,0 +1,9 @@
+name: Gdrive-MC
+version: 1.0
+main: com.neastooid.GdriveMCPlugin
+api-version: 1.19
+author: NESSID
+commands:
+  backup:
+    description: Membuat backup manual
+    usage: /backup

@@ -28,6 +28,15 @@ public class GdriveMCPlugin extends JavaPlugin {
             var driveService = GoogleDriveUtils.getDriveService(creds);
             GoogleDriveUtils.uploadFile(driveService, zipFile, getConfig().getString("google.folder-id"));
 
+            // Hapus file zip lokal setelah upload
+            if (zipFile.exists()) {
+                if (zipFile.delete()) {
+                    getLogger().info("File backup lokal dihapus: " + zipFile.getName());
+                } else {
+                    getLogger().warning("Gagal menghapus file backup lokal: " + zipFile.getName());
+                }
+            }
+
             getLogger().info("Backup berhasil dan diupload ke Google Drive!");
         } catch (Exception e) {
             getLogger().severe("Gagal backup: " + e.getMessage());
